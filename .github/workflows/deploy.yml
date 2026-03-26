@@ -24,7 +24,6 @@ jobs:
       - name: Bước 3 - Build và Push Image lên Docker Hub
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./backend # <--- Sửa dấu chấm (.) thành ./backend
           push: true
-          # Tự động gán tag (thay "ten-image-cua-ban" bằng tên bạn muốn, ví dụ: spring-boot-app)
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/baitapchamdiem:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/baitapchamdiem-backend:latest
