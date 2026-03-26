@@ -1,0 +1,12 @@
+services:
+  frontend:
+    image: vtht02/baitapchamdiem-frontend:latest
+    container_name: baitap_frontend
+    ports:
+      - "3000:80"
+
+  backend:
+    image: vtht02/baitapchamdiem-backend:latest
+    container_name: baitap_backend
+    ports:
+      - "8080:80"
